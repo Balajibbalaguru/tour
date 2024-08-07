@@ -1,0 +1,446 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #e0f7fa; /* Light blue background */
+    color: #004d40; /* Dark cyan text */
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: center; /* Center align the navbar items */
+    align-items: center;
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.0); /* Semi-transparent background */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(193, 35, 114, 0.1); /* Subtle shadow for better visibility */
+}
+
+.logo-container {
+    position: absolute;
+    left: 20px; /* Position the logo at the top left corner */
+    top: 10px;
+}
+
+.logo {
+    width: 100px; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensures the image is treated as a block element */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+.nav-links li {
+    margin: 0 15px; /* Space between each nav link */
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #ffffff; /* White color for better visibility */
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif; /* Use the Roboto font */
+    transition: color 0.3s, border-bottom 0.3s; /* Smooth transition for hover effect */
+    padding: 10px; /* Add padding for better click area */
+}
+
+.nav-links a:hover {
+    color: #131212; /* Change to a nice color on hover */
+    border-bottom: 2px solid #ff4081; /* Add an underline effect on hover */
+}
+.landing {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    color: #ffffff;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.carousel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.carousel-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 3s ease-in-out;
+}
+
+.carousel-image.active {
+    opacity: 1;
+}
+
+.content h1 {
+    font-size: 48px;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 20px;
+    animation: fadeInDown 1s ease-out;
+}
+
+.content p {
+    font-size: 18px;
+    margin-bottom: 40px;
+    animation: fadeInUp 1s ease-out;
+}
+
+.start-btn {
+    padding: 12px 24px;
+    font-size: 16px;
+    color: #ffffff; /* White text color */
+    background-color: transparent; /* Transparent background */
+    border: 2px solid #ffffff; /* White border */
+    border-radius: 50px; /* Oval shape */
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s; /* Smooth transition */
+    font-family: 'Roboto', sans-serif; /* Consistent font */
+}
+
+.start-btn:hover {
+    background-color: #ffffff; /* White background on hover */
+    color: #004d40; /* Dark cyan text color on hover */
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+body {
+    background: url('images/destination_BG.png') no-repeat center center; /* Ensure correct path */
+    background-size: cover; /* Ensure the image covers the entire body */
+}
+
+
+.destinations {
+    padding: 50px 20px;
+    background-image: url('./assets/bg.jpg');
+    height: max-content;
+    text-align: center;
+}
+
+.destinations h2 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #004d40; /* Consistent theme color */
+    margin-bottom: 30px;
+    font-family: 'Playfair Display', serif; /* Consistent font */
+}
+
+.search-filters {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+#search-bar {
+    padding: 16px;
+    font-size: 16px;
+    border-radius: 35px;
+    padding-left: 20px;
+    border: 0px;
+    background-color: rgb(240, 240, 240);
+    width: 50%;
+    margin-right: 20px;
+}
+
+#search-bar:focus{
+   outline: none;
+}
+
+.filters select {
+    padding: 10px;
+    margin-left: 10px;
+    font-size: 16px;
+    border-radius: 20px;
+    border: 1px solid #cccccc;
+    background-color: #ffffff;
+    color: #004d40; /* Text color */
+}
+
+
+.destination-item {
+    background-color: #ffffff; /* Transparent white background */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 250px;
+    height: 360px;
+    margin: 40px;
+    margin-left: 15px;
+    margin-top: 15px;
+    transition: transform 0.3s;
+}
+
+.destination-item:hover {
+    transform: scale(1.04);
+}
+
+/* .destination-item img {
+    width:100%;
+    height: 190px; 
+    object-fit: cover; 
+    border-bottom: 2px solid #e0f7fa; 
+} */
+
+.destination-info {
+    margin-top: 5px;
+    text-align: left;
+}
+
+
+.destination-info h3 {
+    font-size: 24px;
+    margin-bottom: px;
+    color: #000000;
+}
+
+.destination-info p {
+    font-size: 14px;
+    margin-bottom: 8px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: #000000;
+}
+
+.destination-info .rating {
+    font-size: 16px;
+    color: #ffbf00; /* Gold color for ratings */
+}
+
+.view-more {
+    padding: 8px 16px;
+    font-size: 14px;
+    color: #ffffff;
+    background-color: #473d3a;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.view-more:hover {
+    background-color: #0c0c0c; /* Lighter cyan color on hover */
+}
+
+.favorite {
+    font-size: 20px;
+    color: #ff0000; /* Pink color for heart */
+    margin-left: 10px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.favorite.active {
+    color: #ff0000; /* Red color when active */
+}
+
+.logo-container {
+    position: absolute;
+    left: 20px; /* Position the logo at the top left corner */
+    top: 10px;
+}
+
+.logo {
+    width: 100px; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensures the image is treated as a block element */
+}
+
+
+
+.img-size {
+    height: 60px;
+    width: 80px;
+}
+
+.text-modify{
+    text-decoration: none ;
+    color: #0c0c0c ;
+}
+
+@media only screen and (min-width:500px) {
+    .search-filters{
+        display: flex;
+        flex-direction: column;
+    }
+    .filters{
+        margin-top: 20px;
+    }
+    
+}
+
+.travel-img{
+    margin-top: 10px;
+    width: 100%;
+    height: 200px;
+    border-radius: 12px;
+}
+
+.logo-img{
+    height: 70px;
+    width: 100px;
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f2f5;
+    background-image: url('./assets/back1.jpg');
+    background-size: cover;
+  }
+  
+.signup-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f0f2f5;
+        background-image: url('./assets/back1.jpg');
+        background-size: cover;
+
+}
+
+  .login-box {
+    display: flex;
+    width: 800px;
+    background-color: transparent;
+  }
+  
+  .left-side {
+    position: relative;
+    width: 50%;
+  }
+  
+  .login-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .overlay {
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  }
+  
+  .overlay h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .overlay p {
+    font-size: 16px;
+  }
+  
+  .right-side {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .login-form {
+    width: 80%;
+  }
+  
+.input-group {
+    margin-bottom: 15px;
+}
+  
+.input-group input {
+    padding: 14px;
+    border: 1px solid #ccc;
+    border-radius: 45px;
+}
+
+  .sign-in-btn {
+    width: 175px;
+    padding: 10px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+  }
+  
+  .sign-in-btn:hover {
+    background-color: #0056b3;
+  }
+  
+.login-links-text {
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: 15px;
+}
+  
+.login-links-signup {
+    text-decoration: none;
+    color: #ff9963;
+}
+
+.login-links-signup:hover {
+    text-decoration: underline;
+    color: #ff9963;
+}
+
+.login-links {
+    text-decoration: none;
+    color: #ff9963;
+    margin-left: 15px;
+}
+
+.login-links:hover {
+    text-decoration: underline;
+    color: #ff9963;
+}
+  
+.option-style:focus{
+    outline: none;
+}
+
+::-webkit-keygen-select{
+    appearance: none;
+}
